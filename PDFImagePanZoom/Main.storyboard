@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vDl-h3-Y93">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ZoomPDF Layout View Controller-->
+        <scene sceneID="eNe-rk-26v">
+            <objects>
+                <viewController id="vDl-h3-Y93" customClass="ZoomPDFLayoutViewController" customModule="PDFImagePanZoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rmi-qF-wNI">
+                        <rect key="frame" x="0.0" y="0.0" width="2952" height="3600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYV-8F-KTF">
+                                <rect key="frame" x="0.0" y="0.0" width="2952" height="3600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTX-Bc-jg1">
+                                        <rect key="frame" x="0.0" y="0.0" width="2952" height="3600"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TorontoPATHNetworkMap_v.2018.08" translatesAutoresizingMaskIntoConstraints="NO" id="ogG-7x-eFx">
+                                                <rect key="frame" x="0.0" y="0.0" width="2952" height="3600"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DI-96-zjj">
+                                                <rect key="frame" x="1100" y="240" width="150" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="OHg-DG-GXk"/>
+                                                    <constraint firstAttribute="height" constant="50" id="x3K-8S-K7h"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Sample Button"/>
+                                                <connections>
+                                                    <action selector="sampleButtonTapped:" destination="vDl-h3-Y93" eventType="touchUpInside" id="hU6-XA-2m0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ogG-7x-eFx" secondAttribute="bottom" id="6cH-Is-IKT"/>
+                                            <constraint firstItem="2DI-96-zjj" firstAttribute="top" secondItem="xTX-Bc-jg1" secondAttribute="top" constant="240" id="H30-vv-4zu"/>
+                                            <constraint firstAttribute="trailing" secondItem="ogG-7x-eFx" secondAttribute="trailing" id="HTV-vv-tJ3"/>
+                                            <constraint firstItem="2DI-96-zjj" firstAttribute="leading" secondItem="xTX-Bc-jg1" secondAttribute="leading" constant="1100" id="TsH-15-HXN"/>
+                                            <constraint firstItem="ogG-7x-eFx" firstAttribute="leading" secondItem="xTX-Bc-jg1" secondAttribute="leading" id="iw1-by-7FX"/>
+                                            <constraint firstItem="ogG-7x-eFx" firstAttribute="top" secondItem="xTX-Bc-jg1" secondAttribute="top" id="nmc-NN-h2T"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xTX-Bc-jg1" firstAttribute="leading" secondItem="GYV-8F-KTF" secondAttribute="leading" id="Mce-TP-nRr"/>
+                                    <constraint firstAttribute="trailing" secondItem="xTX-Bc-jg1" secondAttribute="trailing" id="SVk-9m-EWW"/>
+                                    <constraint firstAttribute="bottom" secondItem="xTX-Bc-jg1" secondAttribute="bottom" id="cmB-Ec-5iV"/>
+                                    <constraint firstItem="xTX-Bc-jg1" firstAttribute="top" secondItem="GYV-8F-KTF" secondAttribute="top" id="gJj-99-gTE"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="zFb-Gr-RG2"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="0tW-xO-OdB"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rC3-Dr-Jls" firstAttribute="trailing" secondItem="GYV-8F-KTF" secondAttribute="trailing" id="dPx-Fc-cUS"/>
+                            <constraint firstItem="GYV-8F-KTF" firstAttribute="top" secondItem="rC3-Dr-Jls" secondAttribute="top" id="s71-bq-pmI"/>
+                            <constraint firstItem="GYV-8F-KTF" firstAttribute="leading" secondItem="rC3-Dr-Jls" secondAttribute="leading" id="sUf-J5-0sr"/>
+                            <constraint firstItem="rC3-Dr-Jls" firstAttribute="bottom" secondItem="GYV-8F-KTF" secondAttribute="bottom" id="ssb-cl-RlD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rC3-Dr-Jls"/>
+                    </view>
+                    <size key="freeformSize" width="2952" height="3600"/>
+                    <connections>
+                        <outlet property="containerView" destination="xTX-Bc-jg1" id="zcV-JT-Xwz"/>
+                        <outlet property="containerViewBottomConstraint" destination="cmB-Ec-5iV" id="Seo-yk-8mV"/>
+                        <outlet property="containerViewLeadingConstraint" destination="Mce-TP-nRr" id="INq-d7-Wpe"/>
+                        <outlet property="containerViewTopConstraint" destination="gJj-99-gTE" id="cGO-hR-Flw"/>
+                        <outlet property="containerViewTrailingConstraint" destination="SVk-9m-EWW" id="6L5-St-6zD"/>
+                        <outlet property="scrollView" destination="GYV-8F-KTF" id="tNk-DJ-fKW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGI-PF-0bR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-165" y="149"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TorontoPATHNetworkMap_v.2018.08" width="2952" height="3600"/>
+    </resources>
+</document>
